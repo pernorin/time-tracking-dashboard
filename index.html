@@ -21,108 +21,117 @@
 			.attribution {
 				font-size: 11px;
 				text-align: center;
+				color: white;
 			}
 			.attribution a {
-				color: hsl(228, 45%, 44%);
+				color: hsl(228, 45%, 70%);
 			}
 		</style>
 	</head>
 	<body>
-		<main>
-			<section>
-				<div>
-					<p>Report for</p>
-					<h1>Jeremy Robson</h1>
+		<main class="dashboard">
+			<div class="user-card rounded-bottom rounded-top">
+				<div class="user-card__user rounded-bottom rounded-top">
+					<img
+						src="images/image-jeremy.png"
+						alt="Jeremy Robson"
+						class="user-card__img"
+					/>
+					<div>
+						<p class="user-card__text">Report for</p>
+						<h1 class="user-card__name">Jeremy Robson</h1>
+					</div>
 				</div>
-				<div>
-					<!-- Radio buttons? -->
-					Daily Weekly Monthly
+				<div class="user-card__interval">
+					<form class="user-card__interval-picker" id="interval-picker">
+						<input type="radio" name="interval" id="daily" value="daily" checked />
+						<label for="daily">Daily</label>
+						<input type="radio" name="interval" id="weekly" value="weekly" />
+						<label for="weekly">Weekly</label>
+						<input type="radio" name="interval" id="monthly" value="monthly" />
+						<label for="monthly">Monthly</label>
+					</form>
 				</div>
-			</section>
+			</div>
 
-			Work 5hrs
-			<!-- daily -->
-			Previous - 7hrs
-			<!-- daily -->
-			32hrs
-			<!-- weekly -->
-			Previous - 36hrs
-			<!-- weekly -->
-			103hrs
-			<!-- monthly -->
-			Previous - 128hrs
-			<!-- monthly -->
+			<div class="activities-section">
+				<div class="activity-card activity-card--work rounded-top rounded-bottom">
+					<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__title-wrapper">
+							<h2 class="activity-card__title">Work</h2>
+							<img src="images/icon-ellipsis.svg" alt="" class="activity-card__dots" />
+						</div>
+						<span class="activity-card__current">5hrs</span>
+						<span class="activity-card__previous">Yesterday - 7hrs</span>
+					</div>
+				</div>
 
-			Play 1hr
-			<!-- daily -->
-			Previous - 2hrs
-			<!-- daily -->
-			10hrs
-			<!-- weekly -->
-			Previous - 8hrs
-			<!-- weekly -->
-			23hrs
-			<!-- monthly -->
-			Previous - 29hrs
-			<!-- monthly -->
+				<div class="activity-card activity-card--play rounded-top rounded-bottom">
+					<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__title-wrapper">
+							<h2 class="activity-card__title">Play</h2>
+							<img src="images/icon-ellipsis.svg" alt="" class="activity-card__dots" />
+						</div>
+						<span class="activity-card__current">1hr</span>
+						<span class="activity-card__previous">Yesterday - 2hrs</span>
+					</div>
+				</div>
 
-			Study 0hrs
-			<!-- daily -->
-			Previous - 1hr
-			<!-- daily -->
-			4hrs
-			<!-- weekly -->
-			Previous - 7hrs
-			<!-- weekly -->
-			13hrs
-			<!-- monthly -->
-			Previous - 19hrs
-			<!-- monthly -->
+				<div class="activity-card activity-card--study rounded-top rounded-bottom">
+					<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__title-wrapper">
+							<h2 class="activity-card__title">Study</h2>
+							<img src="images/icon-ellipsis.svg" alt="" class="activity-card__dots" />
+						</div>
+						<span class="activity-card__current">0hrs</span>
+						<span class="activity-card__previous">Yesterday - 1hr</span>
+					</div>
+				</div>
 
-			Exercise 1hr
-			<!-- daily -->
-			Previous - 1hr
-			<!-- daily -->
-			4hrs
-			<!-- weekly -->
-			Previous - 5hrs
-			<!-- weekly -->
-			11hrs
-			<!-- monthly -->
-			Previous - 18hrs
-			<!-- monthly -->
+				<div
+					class="activity-card activity-card--exercise rounded-top rounded-bottom"
+				>
+					<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__title-wrapper">
+							<h2 class="activity-card__title">Exercise</h2>
+							<img src="images/icon-ellipsis.svg" alt="" class="activity-card__dots" />
+						</div>
+						<span class="activity-card__current">1hr</span>
+						<span class="activity-card__previous">Yesterday - 1hr</span>
+					</div>
+				</div>
 
-			Social 1hr
-			<!-- daily -->
-			Previous - 3hrs
-			<!-- daily -->
-			5hrs
-			<!-- weekly -->
-			Previous - 10hrs
-			<!-- weekly -->
-			21hrs
-			<!-- monthly -->
-			Previous - 23hrs
-			<!-- monthly -->
+				<div class="activity-card activity-card--social rounded-top rounded-bottom">
+					<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__title-wrapper">
+							<h2 class="activity-card__title">Social</h2>
+							<img src="images/icon-ellipsis.svg" alt="" class="activity-card__dots" />
+						</div>
+						<span class="activity-card__current">1hr</span>
+						<span class="activity-card__previous">Yesterday - 3hrs</span>
+					</div>
+				</div>
 
-			Self Care 0hrs
-			<!-- daily -->
-			Previous - 1hr
-			<!-- daily -->
-			2hrs
-			<!-- weekly -->
-			Previous - 2hrs
-			<!-- weekly -->
-			7hrs
-			<!-- monthly -->
-			Previous - 11hrs
-			<!-- monthly -->
+				<div
+					class="activity-card activity-card--self-care rounded-top rounded-bottom"
+				>
+					<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__title-wrapper">
+							<h2 class="activity-card__title">Self Care</h2>
+							<img src="images/icon-ellipsis.svg" alt="" class="activity-card__dots" />
+						</div>
+						<span class="activity-card__current">0hrs</span>
+						<span class="activity-card__previous">Yesterday - 1hr</span>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer class="attribution">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
+			>. Coded by
+			<a href="https://github.com/pernorin/time-tracking-dashboard">Per Norin</a>.
 		</footer>
 	</body>
 </html>

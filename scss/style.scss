@@ -13,3 +13,136 @@
 	margin: 0;
 	padding: 0;
 }
+body {
+	background-color: $Very-dark-blue;
+	font-family: 'Rubik', sans-serif;
+	font-size: 1.125rem;
+}
+.dashboard {
+	max-width: 23.5rem;
+	margin: 50px auto;
+	display: grid;
+	gap: 1.5rem;
+	padding: 0 27.5px;
+}
+.rounded-top {
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+.rounded-bottom {
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+.user-card {
+	background-color: $Dark-blue;
+	max-width: 20rem;
+
+	&__user {
+		background-color: $Blue;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 2rem;
+	}
+
+	&__img {
+		border-radius: 50%;
+		border: 3px solid white;
+		height: 4rem;
+	}
+	&__text {
+		color: $Pale-Blue;
+		font-size: 1rem;
+	}
+	&__name {
+		color: white;
+		font-weight: 300;
+		font-size: 1.5rem;
+	}
+	&__interval-picker {
+		color: $Desaturated-blue;
+		padding: 22px;
+		display: flex;
+		justify-content: space-between;
+		input[type='radio'] {
+			opacity: 0;
+			position: fixed;
+			width: 0;
+
+			&:checked + label,
+			&:focus + label,
+			&:hover + label {
+				color: white;
+			}
+		}
+	}
+}
+.activities-section {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+.activity-card {
+	background-repeat: no-repeat;
+	background-position: 93% -10%;
+
+	&--work {
+		background-color: $Orange;
+		background-image: url('.././images/icon-work.svg');
+	}
+
+	&--play {
+		background-color: $Soft-blue;
+		background-image: url('.././images/icon-play.svg');
+	}
+
+	&--study {
+		background-color: $Light-red;
+		background-image: url('.././images/icon-study.svg');
+	}
+
+	&--exercise {
+		background-color: $Lime-green;
+		background-image: url('.././images/icon-exercise.svg');
+	}
+
+	&--social {
+		background-color: $Violet;
+		background-image: url('.././images/icon-social.svg');
+	}
+
+	&--self-care {
+		background-color: $Yellow;
+		background-image: url('.././images/icon-self-care.svg');
+	}
+
+	color: white;
+	padding-top: 2.5rem;
+	max-width: 20rem;
+	&__body {
+		background-color: $Dark-blue;
+		padding: 1.5rem;
+	}
+	&__title-wrapper {
+		margin-bottom: 0.5rem;
+	}
+	&__title {
+		display: inline-block;
+		font-size: 1.125rem;
+		font-weight: 500;
+	}
+	&__dots {
+		float: right;
+		margin-top: 0.8125rem;
+	}
+	&__current {
+		font-size: 2rem;
+		font-weight: 300;
+	}
+	&__previous {
+		float: right;
+		font-size: 1rem;
+		color: $Pale-Blue;
+		margin-top: 0.75rem;
+	}
+}
