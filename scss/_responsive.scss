@@ -1,0 +1,11 @@
+//Breakpoints
+$medium: 1063px;
+$large: 1440px;
+
+//Mixins
+@mixin mq($size) {
+	//https://youtu.be/g1kF45K-q7o?t=725
+	@media only screen and (min-width: $size) {
+		@content;
+	}
+}

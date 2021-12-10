@@ -11,14 +11,3 @@ $Very-dark-blue: hsl(226, 43%, 10%);
 $Dark-blue: hsl(235, 46%, 20%);
 $Desaturated-blue: hsl(235, 45%, 61%);
 $Pale-Blue: hsl(236, 100%, 87%);
-//Breakpoints
-$medium: 376px;
-$large: 1440px;
-
-//Mixins
-@mixin mq($size) {
-	//https://youtu.be/g1kF45K-q7o?t=725
-	@media only screen and (min-width: $size) {
-		@content;
-	}
-}

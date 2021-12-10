@@ -1,0 +1,79 @@
+.activity-card {
+	background-repeat: no-repeat;
+	background-position: 93% -10%;
+
+	&--work {
+		background-color: $Orange;
+		background-image: url('.././images/icon-work.svg');
+	}
+
+	&--play {
+		background-color: $Soft-blue;
+		background-image: url('.././images/icon-play.svg');
+	}
+
+	&--study {
+		background-color: $Light-red;
+		background-image: url('.././images/icon-study.svg');
+	}
+
+	&--exercise {
+		background-color: $Lime-green;
+		background-image: url('.././images/icon-exercise.svg');
+	}
+
+	&--social {
+		background-color: $Violet;
+		background-image: url('.././images/icon-social.svg');
+	}
+
+	&--self-care {
+		background-color: $Yellow;
+		background-image: url('.././images/icon-self-care.svg');
+	}
+
+	color: white;
+	padding-top: 2.5rem;
+	max-width: 20rem;
+	&__body {
+		background-color: $Dark-blue;
+		padding: 1.5rem;
+
+		/* 	&:hover {
+			background-color: $Desaturated-blue;
+			cursor: pointer;
+		} */
+	}
+	&__title-wrapper {
+		margin-bottom: 0.5rem;
+	}
+	&__title {
+		display: inline-block;
+		font-size: 1.125rem;
+		font-weight: 500;
+	}
+	&__dots {
+		height: 1.125rem;
+		width: 21px;
+		float: right;
+		padding-top: 0.8125rem;
+		display: inline;
+		fill: #bbc0ff;
+
+		&:hover {
+			fill: #fff;
+			cursor: pointer;
+		}
+	}
+
+	&__current {
+		font-size: 2rem;
+		font-weight: 300;
+	}
+	&__previous {
+		float: right;
+		font-size: 1rem;
+		color: $Pale-Blue;
+		margin-top: 0.75rem;
+	}
+}
