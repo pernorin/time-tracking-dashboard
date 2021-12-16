@@ -1,6 +1,13 @@
 .activity-card {
 	background-repeat: no-repeat;
 	background-position: 93% -10%;
+	color: white;
+	padding-top: 2.5rem;
+	max-width: 20rem;
+
+	@include mq($medium) {
+		width: 16rem;
+	}
 
 	&--work {
 		background-color: $Orange;
@@ -32,12 +39,10 @@
 		background-image: url('.././images/icon-self-care.svg');
 	}
 
-	color: white;
-	padding-top: 2.5rem;
-	max-width: 20rem;
 	&__body {
 		background-color: $Dark-blue;
 		padding: 1.5rem;
+		height: 100%;
 
 		/* 	&:hover {
 			background-color: $Desaturated-blue;
@@ -69,11 +74,20 @@
 	&__current {
 		font-size: 2rem;
 		font-weight: 300;
+		@include mq($medium) {
+			display: block;
+			font-size: 3.5rem;
+			margin-top: 1rem;
+		}
 	}
 	&__previous {
 		float: right;
 		font-size: 1rem;
 		color: $Pale-Blue;
 		margin-top: 0.75rem;
+		@include mq($medium) {
+			float: none;
+			display: block;
+		}
 	}
 }

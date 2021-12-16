@@ -22,6 +22,7 @@
 				font-size: 11px;
 				text-align: center;
 				color: white;
+				height: 20px;
 			}
 			.attribution a {
 				color: hsl(228, 45%, 70%);
@@ -29,117 +30,119 @@
 		</style>
 	</head>
 	<body>
-		<main class="dashboard">
-			<div class="user-card rounded-bottom rounded-top">
-				<div class="user-card__user rounded-bottom rounded-top">
-					<img
-						src="images/image-jeremy.png"
-						alt="Jeremy Robson"
-						class="user-card__img"
-					/>
-					<div>
-						<p class="user-card__text">Report for</p>
-						<h1 class="user-card__name">Jeremy Robson</h1>
-					</div>
-				</div>
-				<div class="user-card__interval">
-					<form class="user-card__interval-picker" id="interval-picker">
-						<input type="radio" name="interval" id="daily" value="daily" checked />
-						<label for="daily">Daily</label>
-						<input type="radio" name="interval" id="weekly" value="weekly" />
-						<label for="weekly">Weekly</label>
-						<input type="radio" name="interval" id="monthly" value="monthly" />
-						<label for="monthly">Monthly</label>
-					</form>
-				</div>
-			</div>
-
-			<div class="activities-section">
-				<div class="activity-card activity-card--work rounded-top rounded-bottom">
-					<div class="activity-card__body rounded-top rounded-bottom">
-						<div class="activity-card__title-wrapper">
-							<h2 class="activity-card__title">Work</h2>
-							<!-- <img src="images/icon-ellipsis.svg" alt="" class="activity-card__dots" /> -->
-							<!-- <div class="activity-card__x-dots"></div> -->
-							<svg class="activity-card__dots">
-								<use href="#ellipsis"></use>
-							</svg>
+		<div class="wrapper">
+			<main class="dashboard">
+				<div class="user-card rounded-bottom rounded-top">
+					<div class="user-card__user rounded-bottom rounded-top">
+						<img
+							src="images/image-jeremy.png"
+							alt="Jeremy Robson"
+							class="user-card__img"
+						/>
+						<div>
+							<p class="user-card__text">Report for</p>
+							<h1 class="user-card__name">Jeremy Robson</h1>
 						</div>
-						<span class="activity-card__current">5hrs</span>
-						<span class="activity-card__previous">Yesterday - 7hrs</span>
+					</div>
+					<div class="user-card__interval">
+						<form class="user-card__interval-picker" id="interval-picker">
+							<input type="radio" name="interval" id="daily" value="daily" checked />
+							<label for="daily">Daily</label>
+							<input type="radio" name="interval" id="weekly" value="weekly" />
+							<label for="weekly">Weekly</label>
+							<input type="radio" name="interval" id="monthly" value="monthly" />
+							<label for="monthly">Monthly</label>
+						</form>
 					</div>
 				</div>
 
-				<div class="activity-card activity-card--play rounded-top rounded-bottom">
-					<div class="activity-card__body rounded-top rounded-bottom">
-						<div class="activity-card__title-wrapper">
-							<h2 class="activity-card__title">Play</h2>
-							<svg class="activity-card__dots">
-								<use href="#ellipsis"></use>
-							</svg>
+				<div class="activities-section">
+					<div class="activity-card activity-card--work rounded-top rounded-bottom">
+						<div class="activity-card__body rounded-top rounded-bottom">
+							<div class="activity-card__title-wrapper">
+								<h2 class="activity-card__title">Work</h2>
+								<svg class="activity-card__dots">
+									<use href="#ellipsis"></use>
+								</svg>
+							</div>
+							<span class="activity-card__current">5hrs</span>
+							<span class="activity-card__previous">Yesterday - 7hrs</span>
 						</div>
-						<span class="activity-card__current">1hr</span>
-						<span class="activity-card__previous">Yesterday - 2hrs</span>
 					</div>
-				</div>
 
-				<div class="activity-card activity-card--study rounded-top rounded-bottom">
-					<div class="activity-card__body rounded-top rounded-bottom">
-						<div class="activity-card__title-wrapper">
-							<h2 class="activity-card__title">Study</h2>
-							<svg class="activity-card__dots">
-								<use href="#ellipsis"></use>
-							</svg>
+					<div class="activity-card activity-card--play rounded-top rounded-bottom">
+						<div class="activity-card__body rounded-top rounded-bottom">
+							<div class="activity-card__title-wrapper">
+								<h2 class="activity-card__title">Play</h2>
+								<svg class="activity-card__dots">
+									<use href="#ellipsis"></use>
+								</svg>
+							</div>
+							<span class="activity-card__current">1hr</span>
+							<span class="activity-card__previous">Yesterday - 2hrs</span>
 						</div>
-						<span class="activity-card__current">0hrs</span>
-						<span class="activity-card__previous">Yesterday - 1hr</span>
 					</div>
-				</div>
 
-				<div
-					class="activity-card activity-card--exercise rounded-top rounded-bottom"
-				>
-					<div class="activity-card__body rounded-top rounded-bottom">
-						<div class="activity-card__title-wrapper">
-							<h2 class="activity-card__title">Exercise</h2>
-							<svg class="activity-card__dots">
-								<use href="#ellipsis"></use>
-							</svg>
+					<div class="activity-card activity-card--study rounded-top rounded-bottom">
+						<div class="activity-card__body rounded-top rounded-bottom">
+							<div class="activity-card__title-wrapper">
+								<h2 class="activity-card__title">Study</h2>
+								<svg class="activity-card__dots">
+									<use href="#ellipsis"></use>
+								</svg>
+							</div>
+							<span class="activity-card__current">0hrs</span>
+							<span class="activity-card__previous">Yesterday - 1hr</span>
 						</div>
-						<span class="activity-card__current">1hr</span>
-						<span class="activity-card__previous">Yesterday - 1hr</span>
 					</div>
-				</div>
 
-				<div class="activity-card activity-card--social rounded-top rounded-bottom">
-					<div class="activity-card__body rounded-top rounded-bottom">
-						<div class="activity-card__title-wrapper">
-							<h2 class="activity-card__title">Social</h2>
-							<svg class="activity-card__dots">
-								<use href="#ellipsis"></use>
-							</svg>
+					<div
+						class="activity-card activity-card--exercise rounded-top rounded-bottom"
+					>
+						<div class="activity-card__body rounded-top rounded-bottom">
+							<div class="activity-card__title-wrapper">
+								<h2 class="activity-card__title">Exercise</h2>
+								<svg class="activity-card__dots">
+									<use href="#ellipsis"></use>
+								</svg>
+							</div>
+							<span class="activity-card__current">1hr</span>
+							<span class="activity-card__previous">Yesterday - 1hr</span>
 						</div>
-						<span class="activity-card__current">1hr</span>
-						<span class="activity-card__previous">Yesterday - 3hrs</span>
 					</div>
-				</div>
 
-				<div
-					class="activity-card activity-card--self-care rounded-top rounded-bottom"
-				>
-					<div class="activity-card__body rounded-top rounded-bottom">
-						<div class="activity-card__title-wrapper">
-							<h2 class="activity-card__title">Self Care</h2>
-							<svg class="activity-card__dots">
-								<use href="#ellipsis"></use>
-							</svg>
+					<div
+						class="activity-card activity-card--social rounded-top rounded-bottom"
+					>
+						<div class="activity-card__body rounded-top rounded-bottom">
+							<div class="activity-card__title-wrapper">
+								<h2 class="activity-card__title">Social</h2>
+								<svg class="activity-card__dots">
+									<use href="#ellipsis"></use>
+								</svg>
+							</div>
+							<span class="activity-card__current">1hr</span>
+							<span class="activity-card__previous">Yesterday - 3hrs</span>
 						</div>
-						<span class="activity-card__current">0hrs</span>
-						<span class="activity-card__previous">Yesterday - 1hr</span>
+					</div>
+
+					<div
+						class="activity-card activity-card--self-care rounded-top rounded-bottom"
+					>
+						<div class="activity-card__body rounded-top rounded-bottom">
+							<div class="activity-card__title-wrapper">
+								<h2 class="activity-card__title">Self Care</h2>
+								<svg class="activity-card__dots">
+									<use href="#ellipsis"></use>
+								</svg>
+							</div>
+							<span class="activity-card__current">0hrs</span>
+							<span class="activity-card__previous">Yesterday - 1hr</span>
+						</div>
 					</div>
 				</div>
-			</div>
-		</main>
+			</main>
+		</div>
 		<footer class="attribution">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

@@ -3,8 +3,6 @@
 @import '_activity-card';
 @import '_user-card';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
-//font-family: 'Rubik', sans-serif;
-//font-size: 1.125rem; (card titles)
 
 //https://www.w3schools.com/sass/default.php
 //https://www.youtube.com/watch?v=nu5mdN2JIwM
@@ -20,17 +18,31 @@ body {
 	background-color: $Very-dark-blue;
 	font-family: 'Rubik', sans-serif;
 	font-size: 1.125rem;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.wrapper {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .dashboard {
 	max-width: 23.5rem;
-	margin: 50px auto;
 	display: grid;
 	gap: 1.5rem;
 	padding: 0 27.5px;
+	width: fit-content;
 
-	/* 	@include mq($medium) {
-		grid-template-columns: 20rem 41.5rem;
-	} */
+	@include mq($medium) {
+		grid-template-columns: 16rem 33.5rem;
+		max-width: 80%;
+	}
+	@include mq($large) {
+		grid-template-columns: 16rem 51rem;
+		max-width: 90%;
+	}
 }
 .rounded-top {
 	border-top-left-radius: 16px;
@@ -45,4 +57,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
+	@include mq($medium) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }
