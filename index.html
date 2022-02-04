@@ -45,7 +45,7 @@
 						</div>
 					</div>
 					<div class="user-card__interval">
-						<form class="user-card__interval-picker" id="interval-picker">
+						<form class="user-card__interval-picker" id="intervals">
 							<input type="radio" name="interval" id="daily" value="daily" checked />
 							<label for="daily">Daily</label>
 							<input type="radio" name="interval" id="weekly" value="weekly" />
@@ -58,7 +58,7 @@
 
 				<div class="activities-section">
 					<div class="activity-card activity-card--work rounded-top rounded-bottom">
-						<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__body rounded-top rounded-bottom" id="work">
 							<div class="activity-card__title-wrapper">
 								<h2 class="activity-card__title">Work</h2>
 								<svg class="activity-card__dots">
@@ -71,7 +71,7 @@
 					</div>
 
 					<div class="activity-card activity-card--play rounded-top rounded-bottom">
-						<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__body rounded-top rounded-bottom" id="play">
 							<div class="activity-card__title-wrapper">
 								<h2 class="activity-card__title">Play</h2>
 								<svg class="activity-card__dots">
@@ -84,7 +84,7 @@
 					</div>
 
 					<div class="activity-card activity-card--study rounded-top rounded-bottom">
-						<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__body rounded-top rounded-bottom" id="study">
 							<div class="activity-card__title-wrapper">
 								<h2 class="activity-card__title">Study</h2>
 								<svg class="activity-card__dots">
@@ -99,7 +99,7 @@
 					<div
 						class="activity-card activity-card--exercise rounded-top rounded-bottom"
 					>
-						<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__body rounded-top rounded-bottom" id="exercise">
 							<div class="activity-card__title-wrapper">
 								<h2 class="activity-card__title">Exercise</h2>
 								<svg class="activity-card__dots">
@@ -114,7 +114,7 @@
 					<div
 						class="activity-card activity-card--social rounded-top rounded-bottom"
 					>
-						<div class="activity-card__body rounded-top rounded-bottom">
+						<div class="activity-card__body rounded-top rounded-bottom" id="social">
 							<div class="activity-card__title-wrapper">
 								<h2 class="activity-card__title">Social</h2>
 								<svg class="activity-card__dots">
@@ -129,7 +129,10 @@
 					<div
 						class="activity-card activity-card--self-care rounded-top rounded-bottom"
 					>
-						<div class="activity-card__body rounded-top rounded-bottom">
+						<div
+							class="activity-card__body rounded-top rounded-bottom"
+							id="self-care"
+						>
 							<div class="activity-card__title-wrapper">
 								<h2 class="activity-card__title">Self Care</h2>
 								<svg class="activity-card__dots">
@@ -159,5 +162,6 @@
 				/>
 			</symbol>
 		</svg>
+		<script src="./js/app.js"></script>
 	</body>
 </html>

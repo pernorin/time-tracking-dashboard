@@ -37,11 +37,11 @@ body {
 
 	@include mq($medium) {
 		grid-template-columns: 16rem 33.5rem;
-		max-width: 80%;
+		max-width: 95%;
 	}
 	@include mq($large) {
 		grid-template-columns: 16rem 51rem;
-		max-width: 90%;
+		// max-width: 90%;
 	}
 }
 .rounded-top {
