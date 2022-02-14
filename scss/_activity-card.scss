@@ -44,10 +44,11 @@
 		padding: 1.5rem;
 		height: 100%;
 
-		/* 	&:hover {
-			background-color: $Desaturated-blue;
+		&:hover {
+			/* Could not find a way for this not to trigger when the ellipsis are hovered */
+			background-color: lighten($Dark-blue, 10%);
 			cursor: pointer;
-		} */
+		}
 	}
 	&__title-wrapper {
 		margin-bottom: 0.5rem;
