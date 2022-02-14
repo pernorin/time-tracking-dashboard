@@ -1,80 +1,68 @@
 const input = document.querySelector('#intervals');
-const btns = document.querySelectorAll('input');
-const cards = document.querySelectorAll('.activity-card__body');
+
+const work = document.getElementById('work');
+const play = document.getElementById('play');
+const study = document.getElementById('study');
+const exercise = document.getElementById('exercise');
+const social = document.getElementById('social');
+const selfcare = document.getElementById('self-care');
+
 let val = 'daily';
-let prev = 'Yesterday';
-// let activities;
+let prevPeriod = 'Yesterday';
 
-console.log('cards: ', cards);
-
-/* cards.forEach((card) => {
-	// console.log('c:', card.firstElementChild.firstElementChild.innerText);
-	// console.log('id: ', card.id);  // ta bort id i html om denna inte används
-	const title = card.querySelector('.activity-card__title');
-	const current = card.querySelector('.activity-card__current');
-	const previous = card.querySelector('.activity-card__previous');
-	console.log(title.innerText, current.innerText, previous.innerText);
-}); */
+const cardContent = (act, cur, prevTime, prevPeriod) => {
+	const pluralHours = (n) => {
+		return n == 1 ? '' : 's';
+	};
+	return `<div class="activity-card__title-wrapper">
+            <h2 class="activity-card__title">${act}</h2>
+            <svg class="activity-card__dots">
+              <use href="#ellipsis"></use>
+            </svg>
+          </div>
+          <span class="activity-card__current">${cur}hr${pluralHours(
+		cur
+	)}</span>
+          <span class="activity-card__previous">${prevPeriod} - ${prevTime}hr${pluralHours(
+		prevTime
+	)}</span>`;
+};
 
 input.addEventListener('change', selectValue);
 
 function selectValue(e) {
-	// console.log(this); // svekis 180
 	val = e.target.value;
-	// console.log('sV: ', val);
-	loadData();
+
+	if (val == 'daily') {
+		prevPeriod = 'Yesterday';
+	} else if (val == 'weekly') {
+		prevPeriod = 'Last Week';
+	} else {
+		prevPeriod = 'Last Month';
+	}
+	getData();
 }
 
-function loadData() {
-	fetch('../data.json')
-		.then((res) => {
-			return res.json();
-		})
-		.then((data) => {
-			/* for (let i = 0; i < data.length; i++) {
-				console.log(data[i].title, data[i].timeframes[val].current);
-			} */
-			// activities = data;
-			/* for (let i = 0; i < data.length; i++) {
-				console.log(data[i].title, data[i].timeframes[val].current);
-			} */
-			console.log(data);
-			let arr = [];
-			data.forEach((activity) => {
-				const title = activity.title;
-				// const timeframes = activity.timeframes[val];
-				const cur = activity.timeframes[val].current;
-				const pre = activity.timeframes[val].previous;
-				arr.push({ title, cur, pre });
-				// console.log(activity.title, activity.timeframes[val]);
-			});
-
-			console.log('arr: ', arr);
-			console.log(arr.title);
-
-			cards.forEach((card) => {
-				const title = card.querySelector('.activity-card__title');
-				const current = card.querySelector('.activity-card__current');
-				const previous = card.querySelector('.activity-card__previous');
-				console.log(title.innerText, current.innerText, previous.innerText);
-				// const i = arr.findIndex((title)=> );
-				let x = arr.find(function (act) {
-					act['title'] == title.innerText;
-				});
-				console.log(x);
-			});
-		});
+function makeCard(data) {
+	data.forEach((activity) => {
+		let title = activity.title;
+		let current = activity.timeframes[val].current;
+		let previous = activity.timeframes[val].previous;
+		let act = '';
+		// act = activity.title.replace(' ', '').toLowerCase(); // For some reason this didn't work for 'Self Care' so I had to make this ugly if-statment:
+		if (activity.title == 'Self Care') {
+			selfcare.innerHTML = cardContent(title, current, previous, prevPeriod);
+		} else {
+			act = activity.title.toLowerCase();
+			this[act].innerHTML = cardContent(title, current, previous, prevPeriod);
+		}
+	});
 }
-loadData();
 
-//gör nytt object med bara en timeframe {'title': 'Work', 'current':5, 'previous': 7}
+async function getData() {
+	const response = await fetch('./data.json');
+	const data = await response.json();
+	return makeCard(data);
+}
 
-//https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
-
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
-
-/*  
- Från traversy DOM array methods:
- anv filter() ? (rad 48)
- 
- */
+getData();
