@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-scss-javascript-bem-m6OQPrhIw](https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-scss-javascript-bem-m6OQPrhIw)
+- Live Site URL: [https://pernorin.github.io/time-tracking-dashboard/](https://pernorin.github.io/time-tracking-dashboard/)
 
 ## My process
 
